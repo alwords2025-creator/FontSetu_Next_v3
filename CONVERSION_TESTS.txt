@@ -1,0 +1,21 @@
+FontSetu Next - Converter regression tests
+==========================================
+Target: KrutiDev 010 / KrutiDev 10 mapping. This is not a Shivaji or KrutiDev 055 engine.
+
+KrutiDev -> Unicode checks:
+  Hkkjr    -> भारत
+  ueLrs    -> नमस्ते
+  lkekU;   -> सामान्य
+  dke      -> काम
+  fd       -> कि
+
+Unicode -> KrutiDev checks:
+  भारत     -> Hkkjr
+  नमस्ते   -> ueLrs
+  सामान्य  -> lkekU;
+  काम      -> dke
+  कि       -> fd
+
+These are regression examples, not proof of perfect conversion for every historical document.
+The conversion includes long-sequence matching and short-i/reph ordering rules. Mixed English text
+and unusual ligatures can still be ambiguous because legacy font text is stored as ordinary ASCII.
